@@ -1,0 +1,162 @@
+<svg width="1100" height="1100" viewBox="0 0 1100 1100" xmlns="http://www.w3.org/2000/svg">
+<rect width="1100" height="1100" fill="#0A0A0A" />
+<rect x="1000" y="1000" width="100" height="100" fill="none" stroke="#FFD700" stroke-width="3" />
+<text x="1050.0" y="1040.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">START</text>
+<text x="1050.0" y="1065.0" font-family="Verdana" font-size="11" fill="#FFD700" text-anchor="middle" font-weight="bold">GO</text>
+<rect x="900" y="1000" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="900" y="1000" width="100" height="25" fill="#FF2D55" opacity="0.4" />
+<text x="950.0" y="1040.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TRIBUTE</text>
+<text x="950.0" y="1065.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">$10</text>
+<rect x="800" y="1000" width="100" height="100" fill="none" stroke="#FFD700" stroke-width="3" />
+<rect x="800" y="1000" width="100" height="25" fill="#FFD700" opacity="0.4" />
+<text x="850.0" y="1040.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">QUICK DRAIN</text>
+<text x="850.0" y="1065.0" font-family="Verdana" font-size="11" fill="#FFD700" text-anchor="middle" font-weight="bold">$50</text>
+<rect x="700" y="1000" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="700" y="1000" width="100" height="25" fill="#FF2D55" opacity="0.4" />
+<text x="750.0" y="1040.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TASK</text>
+<text x="750.0" y="1065.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">SIMPLE</text>
+<rect x="600" y="1000" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="600" y="1000" width="100" height="25" fill="#FF2D55" opacity="0.4" />
+<text x="650.0" y="1040.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TRIBUTE</text>
+<text x="650.0" y="1065.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">$20</text>
+<rect x="500" y="1000" width="100" height="100" fill="none" stroke="#FFD700" stroke-width="3" />
+<rect x="500" y="1000" width="100" height="25" fill="#FFD700" opacity="0.4" />
+<text x="550.0" y="1040.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">THE PURSE</text>
+<text x="550.0" y="1065.0" font-family="Verdana" font-size="11" fill="#FFD700" text-anchor="middle" font-weight="bold">STATION</text>
+<rect x="400" y="1000" width="100" height="100" fill="none" stroke="#BF5AF2" stroke-width="3" />
+<rect x="400" y="1000" width="100" height="25" fill="#BF5AF2" opacity="0.4" />
+<text x="450.0" y="1040.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">GODDESS LUCK</text>
+<text x="450.0" y="1065.0" font-family="Verdana" font-size="11" fill="#BF5AF2" text-anchor="middle" font-weight="bold">LUCK</text>
+<rect x="300" y="1000" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="300" y="1000" width="100" height="25" fill="#FF2D55" opacity="0.4" />
+<text x="350.0" y="1040.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TASK</text>
+<text x="350.0" y="1065.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">SPICY</text>
+<rect x="200" y="1000" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="200" y="1000" width="100" height="25" fill="#FF2D55" opacity="0.4" />
+<text x="250.0" y="1040.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TRIBUTE</text>
+<text x="250.0" y="1065.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">$30</text>
+<rect x="100" y="1000" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="100" y="1000" width="100" height="25" fill="#FF2D55" opacity="0.4" />
+<text x="150.0" y="1040.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TRIBUTE</text>
+<text x="150.0" y="1065.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">$40</text>
+<rect x="0" y="1000" width="100" height="100" fill="none" stroke="#BF5AF2" stroke-width="3" />
+<text x="50.0" y="1040.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">WAITING ROOM</text>
+<text x="50.0" y="1065.0" font-family="Verdana" font-size="11" fill="#BF5AF2" text-anchor="middle" font-weight="bold">JAIL</text>
+<rect x="0" y="900" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="75" y="900" width="25" height="100" fill="#FF2D55" opacity="0.4" />
+<text x="50.0" y="940.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TRIBUTE</text>
+<text x="50.0" y="965.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">$60</text>
+<rect x="0" y="800" width="100" height="100" fill="none" stroke="#BF5AF2" stroke-width="3" />
+<rect x="75" y="800" width="25" height="100" fill="#BF5AF2" opacity="0.4" />
+<text x="50.0" y="840.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">GODDESS LUCK</text>
+<text x="50.0" y="865.0" font-family="Verdana" font-size="11" fill="#BF5AF2" text-anchor="middle" font-weight="bold">LUCK</text>
+<rect x="0" y="700" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="75" y="700" width="25" height="100" fill="#FF2D55" opacity="0.4" />
+<text x="50.0" y="740.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TASK</text>
+<text x="50.0" y="765.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">SERVICE</text>
+<rect x="0" y="600" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="75" y="600" width="25" height="100" fill="#FF2D55" opacity="0.4" />
+<text x="50.0" y="640.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TRIBUTE</text>
+<text x="50.0" y="665.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">$70</text>
+<rect x="0" y="500" width="100" height="100" fill="none" stroke="#FFD700" stroke-width="3" />
+<rect x="75" y="500" width="25" height="100" fill="#FFD700" opacity="0.4" />
+<text x="50.0" y="540.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">THE VAULT</text>
+<text x="50.0" y="565.0" font-family="Verdana" font-size="11" fill="#FFD700" text-anchor="middle" font-weight="bold">STATION</text>
+<rect x="0" y="400" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="75" y="400" width="25" height="100" fill="#FF2D55" opacity="0.4" />
+<text x="50.0" y="440.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TRIBUTE</text>
+<text x="50.0" y="465.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">$80</text>
+<rect x="0" y="300" width="100" height="100" fill="none" stroke="#BF5AF2" stroke-width="3" />
+<rect x="75" y="300" width="25" height="100" fill="#BF5AF2" opacity="0.4" />
+<text x="50.0" y="340.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">GODDESS LUCK</text>
+<text x="50.0" y="365.0" font-family="Verdana" font-size="11" fill="#BF5AF2" text-anchor="middle" font-weight="bold">LUCK</text>
+<rect x="0" y="200" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="75" y="200" width="25" height="100" fill="#FF2D55" opacity="0.4" />
+<text x="50.0" y="240.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TASK</text>
+<text x="50.0" y="265.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">SOCIAL</text>
+<rect x="0" y="100" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="75" y="100" width="25" height="100" fill="#FF2D55" opacity="0.4" />
+<text x="50.0" y="140.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TRIBUTE</text>
+<text x="50.0" y="165.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">$90</text>
+<rect x="0" y="0" width="100" height="100" fill="none" stroke="#FFD700" stroke-width="3" />
+<text x="50.0" y="40.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">THE SHRINE</text>
+<text x="50.0" y="65.0" font-family="Verdana" font-size="11" fill="#FFD700" text-anchor="middle" font-weight="bold">PARKING</text>
+<rect x="100" y="0" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="100" y="75" width="100" height="25" fill="#FF2D55" opacity="0.4" />
+<text x="150.0" y="40.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TRIBUTE</text>
+<text x="150.0" y="65.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">$120</text>
+<rect x="200" y="0" width="100" height="100" fill="none" stroke="#BF5AF2" stroke-width="3" />
+<rect x="200" y="75" width="100" height="25" fill="#BF5AF2" opacity="0.4" />
+<text x="250.0" y="40.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">GODDESS LUCK</text>
+<text x="250.0" y="65.0" font-family="Verdana" font-size="11" fill="#BF5AF2" text-anchor="middle" font-weight="bold">LUCK</text>
+<rect x="300" y="0" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="300" y="75" width="100" height="25" fill="#FF2D55" opacity="0.4" />
+<text x="350.0" y="40.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TASK</text>
+<text x="350.0" y="65.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">PHYSICAL</text>
+<rect x="400" y="0" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="400" y="75" width="100" height="25" fill="#FF2D55" opacity="0.4" />
+<text x="450.0" y="40.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TRIBUTE</text>
+<text x="450.0" y="65.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">$140</text>
+<rect x="500" y="0" width="100" height="100" fill="none" stroke="#FFD700" stroke-width="3" />
+<rect x="500" y="75" width="100" height="25" fill="#FFD700" opacity="0.4" />
+<text x="550.0" y="40.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">THE BANK</text>
+<text x="550.0" y="65.0" font-family="Verdana" font-size="11" fill="#FFD700" text-anchor="middle" font-weight="bold">STATION</text>
+<rect x="600" y="0" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="600" y="75" width="100" height="25" fill="#FF2D55" opacity="0.4" />
+<text x="650.0" y="40.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TRIBUTE</text>
+<text x="650.0" y="65.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">$160</text>
+<rect x="700" y="0" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="700" y="75" width="100" height="25" fill="#FF2D55" opacity="0.4" />
+<text x="750.0" y="40.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TASK</text>
+<text x="750.0" y="65.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">VIDEO</text>
+<rect x="800" y="0" width="100" height="100" fill="none" stroke="#BF5AF2" stroke-width="3" />
+<rect x="800" y="75" width="100" height="25" fill="#BF5AF2" opacity="0.4" />
+<text x="850.0" y="40.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">GODDESS LUCK</text>
+<text x="850.0" y="65.0" font-family="Verdana" font-size="11" fill="#BF5AF2" text-anchor="middle" font-weight="bold">LUCK</text>
+<rect x="900" y="0" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="900" y="75" width="100" height="25" fill="#FF2D55" opacity="0.4" />
+<text x="950.0" y="40.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TRIBUTE</text>
+<text x="950.0" y="65.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">$180</text>
+<rect x="1000" y="0" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<text x="1050.0" y="40.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">SENT TO GODDESS</text>
+<text x="1050.0" y="65.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">GO TO JAIL</text>
+<rect x="1000" y="100" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="1000" y="100" width="25" height="100" fill="#FF2D55" opacity="0.4" />
+<text x="1050.0" y="140.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TRIBUTE</text>
+<text x="1050.0" y="165.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">$250</text>
+<rect x="1000" y="200" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="1000" y="200" width="25" height="100" fill="#FF2D55" opacity="0.4" />
+<text x="1050.0" y="240.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TASK</text>
+<text x="1050.0" y="265.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">SHOPPING</text>
+<rect x="1000" y="300" width="100" height="100" fill="none" stroke="#BF5AF2" stroke-width="3" />
+<rect x="1000" y="300" width="25" height="100" fill="#BF5AF2" opacity="0.4" />
+<text x="1050.0" y="340.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">GODDESS LUCK</text>
+<text x="1050.0" y="365.0" font-family="Verdana" font-size="11" fill="#BF5AF2" text-anchor="middle" font-weight="bold">LUCK</text>
+<rect x="1000" y="400" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="1000" y="400" width="25" height="100" fill="#FF2D55" opacity="0.4" />
+<text x="1050.0" y="440.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TRIBUTE</text>
+<text x="1050.0" y="465.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">$300</text>
+<rect x="1000" y="500" width="100" height="100" fill="none" stroke="#FFD700" stroke-width="3" />
+<rect x="1000" y="500" width="25" height="100" fill="#FFD700" opacity="0.4" />
+<text x="1050.0" y="540.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">THE TREASURY</text>
+<text x="1050.0" y="565.0" font-family="Verdana" font-size="11" fill="#FFD700" text-anchor="middle" font-weight="bold">STATION</text>
+<rect x="1000" y="600" width="100" height="100" fill="none" stroke="#BF5AF2" stroke-width="3" />
+<rect x="1000" y="600" width="25" height="100" fill="#BF5AF2" opacity="0.4" />
+<text x="1050.0" y="640.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">GODDESS LUCK</text>
+<text x="1050.0" y="665.0" font-family="Verdana" font-size="11" fill="#BF5AF2" text-anchor="middle" font-weight="bold">LUCK</text>
+<rect x="1000" y="700" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="1000" y="700" width="25" height="100" fill="#FF2D55" opacity="0.4" />
+<text x="1050.0" y="740.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TRIBUTE</text>
+<text x="1050.0" y="765.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">$400</text>
+<rect x="1000" y="800" width="100" height="100" fill="none" stroke="#FFD700" stroke-width="3" />
+<rect x="1000" y="800" width="25" height="100" fill="#FFD700" opacity="0.4" />
+<text x="1050.0" y="840.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">MAJOR DRAIN</text>
+<text x="1050.0" y="865.0" font-family="Verdana" font-size="11" fill="#FFD700" text-anchor="middle" font-weight="bold">$100</text>
+<rect x="1000" y="900" width="100" height="100" fill="none" stroke="#FF2D55" stroke-width="3" />
+<rect x="1000" y="900" width="25" height="100" fill="#FF2D55" opacity="0.4" />
+<text x="1050.0" y="940.0" font-family="Verdana" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TRIBUTE</text>
+<text x="1050.0" y="965.0" font-family="Verdana" font-size="11" fill="#FF2D55" text-anchor="middle" font-weight="bold">$500</text>
+<polygon points="550,350 700,550 550,750 400,550" fill="none" stroke="#FF2D55" stroke-width="5" opacity="0.5" />
+<text x="550" y="550" font-family="Impact" font-size="80" fill="#FF2D55" text-anchor="middle" transform="rotate(-45 550 550)">DRAIN U PLAY</text>
+<text x="550" y="630" font-family="Arial" font-size="24" fill="#FFD700" text-anchor="middle" transform="rotate(-45 550 550)">EST. 2024</text>
+</svg>
