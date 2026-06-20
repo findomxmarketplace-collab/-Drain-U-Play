@@ -37,7 +37,10 @@ function LandingPage() {
   const checkStatus = async () => {
     try {
       const res = await axios.get(`${BACKEND_URL}/payment-status/${playerId}`)
-      setIsPaid(res.data.paid)
+      const isPaidServer = res.data.paid
+      const isPaidPayPal = sessionStorage.getItem('paypal_paid') === 'true'
+      setIsPaid(isPaidServer || isPaidPayPal)
+      
       // For now, verification is session-based or mock
       const urlParams = new URLSearchParams(window.location.search);
       const isVerifiedParam = urlParams.get('isVerified') === 'true';

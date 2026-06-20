@@ -141,7 +141,7 @@ app.post('/create-checkout-session', async (req, res) => {
             product_data: {
               name: 'Drain U Play Entry Fee',
             },
-            unit_amount: 444,
+            unit_amount: 666,
           },
           quantity: 1,
         },
