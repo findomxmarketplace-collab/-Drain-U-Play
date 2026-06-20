@@ -22,7 +22,7 @@ Drain U Play is a gamified Findom (Financial Domination) platform that transform
 5. Deploy the `backend/` directory.
 
 ## Features
-- Mandatory $4.44 Entry Fee (Stripe).
+- Mandatory $6.66 Entry Fee (Stripe).
 - Mandatory Facial Age Verification (FaceIO).
 - Real-time multiplayer board game mechanics.
 - Goddess SaaS Dashboard for multi-room management.

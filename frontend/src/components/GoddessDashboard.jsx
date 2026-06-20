@@ -104,7 +104,7 @@ const GoddessDashboard = () => {
           </div>
           <div className="flex items-center gap-4">
             <div className="bg-neutral-900 px-4 py-2 rounded-full border border-pink-500/30 text-sm font-bold text-pink-400">
-              SaaS License: Active ($44.44/mo)
+              SaaS License: Active ($46.66/mo)
             </div>
             <button className="p-2 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors">
               <Settings size={20} />

@@ -78,14 +78,36 @@ function LandingPage() {
         <div className="bg-white p-8 rounded-3xl shadow-2xl border-4 border-pink-300 max-w-md w-full">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Mandatory Entry Tribute</h2>
           <p className="text-lg text-gray-600 mb-8">
-            To enter and play, a one-time tribute of <span className="font-bold text-pink-500">$4.44</span> is required.
+            To enter and play, a one-time tribute of <span className="font-bold text-pink-500">$6.66</span> is required.
           </p>
-          <button 
-            onClick={handlePayment}
-            className="w-full py-4 bg-pink-500 hover:bg-pink-600 text-white font-bold rounded-xl transition-all shadow-lg transform hover:scale-[1.02]"
-          >
-            Pay Tribute & Play
-          </button>
+          <div className="flex flex-col gap-4">
+            <button 
+              onClick={handlePayment}
+              className="w-full py-4 bg-pink-500 hover:bg-pink-600 text-white font-bold rounded-xl transition-all shadow-lg transform hover:scale-[1.02]"
+            >
+              Pay Tribute & Play ($6.66)
+            </button>
+            <a 
+              href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=thewanderingcoaches@gmail.com&item_name=Drain%20U%20Play%20Entry%20Tribute&amount=6.66&currency_code=USD"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-4 bg-[#0070ba] hover:bg-[#003087] text-white font-bold rounded-xl transition-all shadow-lg transform hover:scale-[1.02] flex items-center justify-center gap-2"
+            >
+              Pay with PayPal ($6.66)
+            </a>
+            <button 
+              onClick={() => {
+                const confirmed = window.confirm("Have you completed the PayPal payment? Devotion must be absolute. (Demo: Clicking OK will unlock the board)");
+                if (confirmed) {
+                  setIsPaid(true);
+                  sessionStorage.setItem('paypal_paid', 'true');
+                }
+              }}
+              className="text-[10px] text-pink-400 font-bold uppercase hover:text-pink-600 transition-colors"
+            >
+              I have already paid via PayPal
+            </button>
+          </div>
         </div>
       </div>
     )

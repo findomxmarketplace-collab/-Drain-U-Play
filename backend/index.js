@@ -162,7 +162,7 @@ app.get('/verify-payment', async (req, res) => {
   try {
     const session = await stripe.checkout.sessions.retrieve(session_id);
     if (session.payment_status === 'paid') {
-      await dbRun("INSERT OR REPLACE INTO payments (id, player_id, amount, status) VALUES (?, ?, 4.44, 'paid')", [session_id, playerId]);
+      await dbRun("INSERT OR REPLACE INTO payments (id, player_id, amount, status) VALUES (?, ?, 6.66, 'paid')", [session_id, playerId]);
       res.json({ success: true });
     } else {
       res.json({ success: false });

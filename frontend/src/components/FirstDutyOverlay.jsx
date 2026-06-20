@@ -64,7 +64,7 @@ const FirstDutyOverlay = ({ goddessName, solanaAddress, throneLink, wishtenderLi
               
               <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                 <p className="text-neutral-400 text-sm leading-relaxed">
-                  The <span className="text-white font-bold">$4.44</span> hosting fee for this session has been charged to Her account. A truly devoted submissive would never allow Her to carry a balance on their behalf.
+                  The <span className="text-white font-bold">$6.66</span> hosting fee for this session has been charged to Her account. A truly devoted submissive would never allow Her to carry a balance on their behalf.
                 </p>
               </div>
 
@@ -78,7 +78,7 @@ const FirstDutyOverlay = ({ goddessName, solanaAddress, throneLink, wishtenderLi
                 onClick={handlePayBack}
                 className="w-full py-5 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-black text-xl rounded-2xl shadow-2xl transition-all transform hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-3 group"
               >
-                PAY HER BACK ($4.44)
+                PAY HER BACK ($6.66)
                 <ExternalLink size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </button>
 
@@ -122,7 +122,7 @@ const FirstDutyOverlay = ({ goddessName, solanaAddress, throneLink, wishtenderLi
               <div className="mt-4 text-left">
                 <label className="text-[10px] text-neutral-500 font-black uppercase mb-1 block">Required Amount</label>
                 <div className="text-xl font-black text-white">0.03 SOL</div>
-                <p className="text-[10px] text-neutral-500 italic">Approx $4.44 + Gas</p>
+                <p className="text-[10px] text-neutral-500 italic">Approx $6.66 + Gas</p>
               </div>
             </div>
 
