@@ -87,7 +87,7 @@ const FirstDutyOverlay = ({ goddessName, solanaAddress, throneLink, wishtenderLi
                   onClick={() => setShowCrypto(true)}
                   className="w-full py-4 bg-neutral-800 text-purple-400 font-black text-lg rounded-2xl shadow-lg transition-all transform hover:scale-[1.02] active:scale-95 border-2 border-purple-500/30 flex items-center justify-center gap-2"
                 >
-                  <Coins size={20} /> PAY WITH CRYPTO (SOL)
+                  <img src="/solana_luxury_icon.png" alt="SOL" className="w-6 h-6 object-contain" /> PAY WITH CRYPTO (SOL)
                 </button>
               )}
 
