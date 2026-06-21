@@ -7,15 +7,53 @@ const AgeVerification = ({ onVerified }) => {
   const [faceio, setFaceio] = useState(null);
 
   useEffect(() => {
-    // Initialize FACEIO with the provided Public ID
-    // Replace 'fio_placeholder_id' with your actual Public ID from the FACEIO Console
+    let interval;
+    let timeout;
+
+    const initFaceIO = () => {
+      if (window.faceIO) {
+        console.log("FACEIO library detected, initializing...");
+        try {
+          // Initialize FACEIO with the provided Public ID
+          // Using the current placeholder, but ensuring the library is present first
+          const fio = new window.faceIO("fio_placeholder_id");
+          setFaceio(fio);
+          setStatus('idle');
+          setError(null);
+          if (interval) clearInterval(interval);
+          if (timeout) clearTimeout(timeout);
+        } catch (e) {
+          console.error("FACEIO initialization error:", e);
+          setError("FACEIO initialization failed: " + e.message);
+          setStatus('error');
+          if (interval) clearInterval(interval);
+          if (timeout) clearTimeout(timeout);
+        }
+      }
+    };
+
     if (window.faceIO) {
-      const fio = new window.faceIO("fio_placeholder_id");
-      setFaceio(fio);
+      initFaceIO();
     } else {
-      setError("FACEIO library failed to load. Check your internet connection.");
-      setStatus('error');
+      console.log("FACEIO library not found, waiting...");
+      setStatus('loading'); // You might want to add a loading state
+      interval = setInterval(initFaceIO, 500);
+      
+      // Fallback timeout after 10 seconds
+      timeout = setTimeout(() => {
+        if (!window.faceIO) {
+          console.error("FACEIO library load timeout after 10s");
+          setError("FACEIO library failed to load. Please check your internet connection and ensure no ad-blockers are blocking 'cdn.faceio.net'.");
+          setStatus('error');
+          if (interval) clearInterval(interval);
+        }
+      }, 10000);
     }
+
+    return () => {
+      if (interval) clearInterval(interval);
+      if (timeout) clearTimeout(timeout);
+    };
   }, []);
 
   const handleScan = async () => {
@@ -55,6 +93,13 @@ const AgeVerification = ({ onVerified }) => {
         </p>
         
         <div className="relative aspect-video bg-neutral-100 rounded-xl mb-8 flex items-center justify-center border-2 border-dashed border-pink-200 overflow-hidden">
+          {status === 'loading' && (
+            <div className="flex flex-col items-center text-pink-400">
+              <div className="w-10 h-10 border-4 border-pink-200 border-t-pink-500 rounded-full animate-spin mb-2" />
+              <p>Initializing security...</p>
+            </div>
+          )}
+          
           {status === 'idle' && (
             <div className="flex flex-col items-center text-gray-400">
               <Camera size={48} className="mb-2" />
