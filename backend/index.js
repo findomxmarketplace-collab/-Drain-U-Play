@@ -3,7 +3,7 @@ const http = require('http');
 const { Server } = require('socket.io');
 const cors = require('cors');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const sqlite3 = require('sqlite3').verbose();
+const { createClient } = require('@libsql/client');
 const path = require('path');
 require('dotenv').config();
 
@@ -22,31 +22,40 @@ const io = new Server(server, {
 });
 
 // Database Setup
-const dbPath = process.env.DB_PATH || path.join(__dirname, 'drain_u_play.db');
-const db = new sqlite3.Database(dbPath);
-
-db.serialize(() => {
-  db.run("CREATE TABLE IF NOT EXISTS payments (id TEXT PRIMARY KEY, player_id TEXT, amount REAL, status TEXT, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)");
-  db.run("CREATE TABLE IF NOT EXISTS rooms (id TEXT PRIMARY KEY, goddess_id TEXT, created_at DATETIME DEFAULT CURRENT_TIMESTAMP, solana_address TEXT, wishtender_link TEXT, throne_link TEXT)");
-  db.run("CREATE TABLE IF NOT EXISTS sessions (id INTEGER PRIMARY KEY AUTOINCREMENT, room_id TEXT, goddess_id TEXT, total_tribute REAL, ended_at DATETIME DEFAULT CURRENT_TIMESTAMP)");
+const db = createClient({
+  url: process.env.TURSO_DATABASE_URL || 'file:drain_u_play.db',
+  authToken: process.env.TURSO_AUTH_TOKEN,
 });
 
-const dbAll = (query, params = []) => {
-  return new Promise((resolve, reject) => {
-    db.all(query, params, (err, rows) => {
-      if (err) reject(err);
-      else resolve(rows);
-    });
-  });
+const dbAll = async (query, params = []) => {
+  try {
+    const result = await db.execute({ sql: query, args: params });
+    return result.rows;
+  } catch (error) {
+    console.error(`dbAll Error [${query}]:`, error);
+    throw error;
+  }
 };
 
-const dbRun = (query, params = []) => {
-  return new Promise((resolve, reject) => {
-    db.run(query, params, function(err) {
-      if (err) reject(err);
-      else resolve(this);
-    });
-  });
+const dbRun = async (query, params = []) => {
+  try {
+    return await db.execute({ sql: query, args: params });
+  } catch (error) {
+    console.error(`dbRun Error [${query}]:`, error);
+    throw error;
+  }
+};
+
+const initDb = async () => {
+  try {
+    await db.execute("CREATE TABLE IF NOT EXISTS payments (id TEXT PRIMARY KEY, player_id TEXT, amount REAL, status TEXT, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)");
+    await db.execute("CREATE TABLE IF NOT EXISTS rooms (id TEXT PRIMARY KEY, goddess_id TEXT, created_at DATETIME DEFAULT CURRENT_TIMESTAMP, solana_address TEXT, wishtender_link TEXT, throne_link TEXT)");
+    await db.execute("CREATE TABLE IF NOT EXISTS sessions (id INTEGER PRIMARY KEY AUTOINCREMENT, room_id TEXT, goddess_id TEXT, total_tribute REAL, ended_at DATETIME DEFAULT CURRENT_TIMESTAMP)");
+    console.log('Database tables initialized');
+    await initRooms();
+  } catch (error) {
+    console.error('Failed to initialize database:', error);
+  }
 };
 
 const DEFAULT_SOLANA_ADDRESS = 'GsxgBgtbCztWcbdFd6ThgGMseZeBwWjfEwMtKQ3jubgJ';
@@ -83,11 +92,13 @@ const initRooms = async () => {
         history: [] 
       };
     }
+    console.log('Rooms loaded:', Object.keys(rooms));
   } catch (error) {
     console.error('Failed to init rooms:', error);
   }
 };
-initRooms();
+
+initDb();
 
 app.post('/create-room', async (req, res) => {
   const { roomId, goddessId } = req.body;
