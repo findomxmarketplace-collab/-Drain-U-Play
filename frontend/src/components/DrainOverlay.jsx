@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import AlternativePayments from './AlternativePayments';
 
-const DrainOverlay = ({ label, description, price, onComplete, paymentLink }) => {
+const DrainOverlay = ({ label, description, price, onComplete, paymentLink, playerId }) => {
   const [processing, setProcessing] = useState(false);
 
   const handleAuthorize = () => {
@@ -66,6 +67,8 @@ const DrainOverlay = ({ label, description, price, onComplete, paymentLink }) =>
           >
             {processing ? 'PROCESSING...' : 'Authorize Drain'}
           </button>
+
+          <AlternativePayments playerId={playerId} />
         </div>
 
         <p className="mt-12 text-[10px] text-red-600 uppercase tracking-[15px] animate-pulse font-black">

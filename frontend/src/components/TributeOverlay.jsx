@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import AlternativePayments from './AlternativePayments';
 
-const TributeOverlay = ({ label, description, price, onComplete, paymentLink }) => {
+const TributeOverlay = ({ label, description, price, onComplete, paymentLink, playerId }) => {
   const [paid, setPaid] = useState(false);
   const fee = Math.max(price * 0.1, 5); // 10% gratitude fee or $5 min
   const total = price + fee;
@@ -65,6 +66,8 @@ const TributeOverlay = ({ label, description, price, onComplete, paymentLink }) 
           >
             {paid ? 'PAID' : 'Confirm Payment'}
           </button>
+          
+          <AlternativePayments playerId={playerId} />
         </div>
 
         {/* Invoice Seal */}

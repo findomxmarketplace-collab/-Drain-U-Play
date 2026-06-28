@@ -2,7 +2,12 @@ const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
 const cors = require('cors');
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+let stripe;
+if (process.env.STRIPE_SECRET_KEY) {
+  stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+} else {
+  console.warn('STRIPE_SECRET_KEY not provided. Stripe payments will be disabled.');
+}
 const { createClient } = require('@libsql/client');
 const path = require('path');
 require('dotenv').config();
@@ -142,6 +147,9 @@ app.get('/session-history', async (req, res) => {
 
 app.post('/create-checkout-session', async (req, res) => {
   const { playerId } = req.body;
+  if (!stripe) {
+    return res.status(503).json({ error: 'Stripe is not configured on this server.' });
+  }
   try {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
@@ -170,6 +178,9 @@ app.post('/create-checkout-session', async (req, res) => {
 
 app.get('/verify-payment', async (req, res) => {
   const { session_id, playerId } = req.query;
+  if (!stripe) {
+    return res.status(503).json({ error: 'Stripe is not configured on this server.' });
+  }
   try {
     const session = await stripe.checkout.sessions.retrieve(session_id);
     if (session.payment_status === 'paid') {

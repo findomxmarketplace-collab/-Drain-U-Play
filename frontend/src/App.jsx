@@ -16,6 +16,7 @@ import FirstDutyOverlay from './components/FirstDutyOverlay'
 import { BOARD_SPACES, LUCK_CARDS, getDependencyTier } from './gameData'
 import BACKEND_URL from './api'
 
+console.log('Connecting to backend at:', BACKEND_URL);
 const socket = io(BACKEND_URL)
 
 function LandingPage() {
@@ -148,6 +149,7 @@ function GameRoom({ playerId }) {
   const [searchParams] = useSearchParams()
   const roomId = searchParams.get('roomId') || 'main'
   const [state, setState] = useState(null)
+  const [connected, setConnected] = useState(socket.connected)
   const stateRef = useRef(null)
   const [lastSpace, setLastSpace] = useState(null)
   const [showEvent, setShowEvent] = useState(false)
@@ -158,9 +160,26 @@ function GameRoom({ playerId }) {
   }, [state])
 
   useEffect(() => {
-    socket.emit('join_game', { playerId, roomId })
+    const onConnect = () => {
+      console.log('Socket connected, joining game...');
+      setConnected(true);
+      socket.emit('join_game', { playerId, roomId });
+    };
+    const onDisconnect = () => {
+      console.log('Socket disconnected');
+      setConnected(false);
+    };
+
+    socket.on('connect', onConnect);
+    socket.on('disconnect', onDisconnect);
+    
+    // If already connected, join immediately
+    if (socket.connected) {
+      onConnect();
+    }
     
     socket.on('state_update', (newState) => {
+      console.log('Received state update:', newState);
       setState(newState)
       if (newState.players[playerId]) {
         const currentPos = newState.players[playerId].pos
@@ -335,6 +354,8 @@ function GameRoom({ playerId }) {
     })
 
     return () => {
+      socket.off('connect', onConnect);
+      socket.off('disconnect', onDisconnect);
       socket.off('state_update')
       socket.off('dice_rolled')
       socket.off('sync_task_triggered')
@@ -372,7 +393,26 @@ function GameRoom({ playerId }) {
     setShowEvent(false)
   }
 
-  if (!state) return <div className="min-h-screen bg-neutral-900 text-pink-400 flex items-center justify-center">Syncing with Goddess...</div>
+  if (!state) return (
+    <div className="min-h-screen bg-neutral-900 text-pink-400 flex flex-col items-center justify-center gap-4">
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-pink-500"></div>
+      <div className="text-xl font-bold">Syncing with Goddess...</div>
+      <div className="text-xs text-neutral-500 font-mono">
+        Status: {connected ? 'Connected' : 'Disconnected'}
+      </div>
+      <div className="text-[10px] text-neutral-600 font-mono max-w-xs break-all text-center">
+        Backend: {BACKEND_URL}
+      </div>
+      {!connected && (
+        <button 
+          onClick={() => window.location.reload()}
+          className="mt-4 px-4 py-2 bg-pink-600 text-white rounded-lg text-sm font-bold"
+        >
+          Retry Connection
+        </button>
+      )}
+    </div>
+  )
 
   const currentPlayer = state.players[playerId]
   const isMyTurn = state.turn === playerId
@@ -424,6 +464,7 @@ function GameRoom({ playerId }) {
               price={eventData.price || 0}
               onComplete={closeEvent}
               paymentLink={state.throneLink || state.wishtenderLink}
+              playerId={playerId}
             />
           ) : eventData.type === 'DRAIN' ? (
             <DrainOverlay 
@@ -432,6 +473,7 @@ function GameRoom({ playerId }) {
               price={eventData.price || 0}
               onComplete={closeEvent}
               paymentLink={state.throneLink || state.wishtenderLink}
+              playerId={playerId}
             />
           ) : eventData.type === 'GAMBLE' ? (
             <GambleOverlay 
