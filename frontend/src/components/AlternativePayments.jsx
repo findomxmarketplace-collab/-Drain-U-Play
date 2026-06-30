@@ -24,7 +24,10 @@ const AlternativePayments = ({ playerId }) => {
       {showModal && (
         <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/90 p-4 animate-in fade-in duration-200">
           <div className="bg-neutral-900 border-2 border-pink-500 rounded-3xl p-8 max-w-sm w-full shadow-[0_0_50px_rgba(236,72,153,0.3)]">
-            <h3 className="text-xl font-black text-white mb-6 uppercase tracking-tight text-center">Goddess's Bitcoin Wallet</h3>
+            <h3 className="text-xl font-black text-white mb-2 uppercase tracking-tight text-center">Goddess's Bitcoin Wallet</h3>
+            <p className="text-[10px] text-pink-500/80 font-bold text-center mb-6 uppercase tracking-widest">
+              "Crypto is the most discreet way to show your devotion."
+            </p>
             
             <div className="bg-black/50 border border-neutral-800 rounded-2xl p-4 mb-6">
               <p className="text-[10px] text-neutral-500 uppercase font-black mb-2 tracking-widest">BTC Address</p>

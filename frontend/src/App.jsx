@@ -13,6 +13,7 @@ import DrainOverlay from './components/DrainOverlay'
 import GambleOverlay from './components/GambleOverlay'
 import MandateOverlay from './components/MandateOverlay'
 import FirstDutyOverlay from './components/FirstDutyOverlay'
+import AlternativePayments from './components/AlternativePayments'
 import { BOARD_SPACES, LUCK_CARDS, getDependencyTier } from './gameData'
 import BACKEND_URL from './api'
 
@@ -80,9 +81,10 @@ function LandingPage() {
         <h1 className="text-5xl font-extrabold text-pink-600 mb-4 drop-shadow-sm">Drain U Play</h1>
         <p className="text-pink-500 font-bold mb-8 tracking-widest uppercase">The Ultimate Submission Game</p>
         <div className="bg-white p-8 rounded-3xl shadow-2xl border-4 border-pink-300 max-w-md w-full">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Mandatory Entry Tribute</h2>
-          <p className="text-lg text-gray-600 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4 italic tracking-tight">Your first sacrifice to enter Her domain.</h2>
+          <p className="text-lg text-gray-600 mb-8 leading-tight">
             To enter and play, a one-time tribute of <span className="font-bold text-pink-500">$6.66</span> is required.
+            <br/><span className="text-xs text-neutral-400 mt-2 block font-medium">Surrender your pride. Surrender your coin.</span>
           </p>
           <div className="flex flex-col gap-4">
             <button 
@@ -111,6 +113,10 @@ function LandingPage() {
             >
               I have already paid via PayPal
             </button>
+            
+            <div className="mt-4 pt-4 border-t border-neutral-100">
+              <AlternativePayments playerId={playerId} />
+            </div>
           </div>
         </div>
       </div>
@@ -402,6 +408,12 @@ function GameRoom({ playerId }) {
       </div>
       <div className="text-[10px] text-neutral-600 font-mono max-w-xs break-all text-center">
         Backend: {BACKEND_URL}
+        {BACKEND_URL.includes('localhost') && (
+          <div className="text-pink-500/50 mt-1 uppercase text-[8px] font-bold">
+            Hint: Pointing to local development server. 
+            Ensure your .env VITE_BACKEND_URL is set for production.
+          </div>
+        )}
       </div>
       {!connected && (
         <button 
